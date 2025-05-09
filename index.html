@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8-sig" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>癒し系コミュニティ</title>
   <style>
@@ -12,69 +12,93 @@
     header {
       background-color: #003366;
       color: white;
-      padding: 10px 20px;
       text-align: center;
+      padding: 1rem 1rem 0.5rem;
     }
-    .nav {
+    header h1 {
+      margin: 0.5rem;
+    }
+    header p {
+      margin: 0.5rem;
+      font-size: 0.9rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background: #eee;
+      padding: 0.5rem 1rem;
+    }
+    .tag-nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      background-color: #eee;
-      padding: 10px 0;
+      background: #003366;
+      padding: 0.3rem;
+      flex-wrap: wrap;
     }
-    .tags {
-      background-color: #003366;
+    .tag-nav a {
       color: white;
-      text-align: center;
-      padding: 8px 0;
-      font-size: 14px;
-    }
-    .tags a {
-      color: white;
-      margin: 0 6px;
+      margin: 0 0.6rem;
       text-decoration: none;
+      font-size: 0.9rem;
     }
-    .slider {
+    .litlink {
+      color: #003366;
+      font-size: 0.9rem;
+      text-align: right;
+      padding-right: 1rem;
+      margin-top: 0.3rem;
+    }
+    .slider-container {
       display: flex;
       overflow-x: auto;
       scroll-behavior: smooth;
-      padding: 20px;
-      gap: 16px;
+      padding: 1rem;
     }
     .card {
       flex: 0 0 auto;
-      width: 250px;
+      width: 240px;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 10px;
-      text-align: center;
+      margin: 0 0.6rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
-    .card iframe {
+    iframe {
       width: 100%;
-      height: 420px;
+      height: 430px;
+      border: none;
     }
-    .description {
+    .card h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    .arrow {
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0 1rem;
+      color: #003366;
+      user-select: none;
+    }
+    footer {
       text-align: center;
-      margin: 20px;
-      white-space: pre-wrap;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: gray;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>癒し系コミュニティ</h1>
-    <p class="description">癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。
-日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。
-『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。</p>
+    <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
+    日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+    『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。</p>
   </header>
-
-  <nav class="nav">
-    <a href="index.html">ホーム</a>
-    <a href="tag_list.html">タグ一覧</a>
+  <nav>
+    <div><a href="index.html">ホーム</a></div>
+    <div class="litlink"><a href="https://lit.link/kotobaassist" target="_blank">lit.link</a></div>
   </nav>
-
-  <div class="tags">
+  <div class="tag-nav">
     
       <a href="tag_癒し.html">#癒し</a>
     
@@ -82,39 +106,22 @@
     
       <a href="tag_希望.html">#希望</a>
     
-      <a href="tag_切なさ.html">#切なさ</a>
-    
       <a href="tag_前向き.html">#前向き</a>
+    
+      <a href="tag_切なさ.html">#切なさ</a>
     
   </div>
 
-  <div class="slider">
-    
-    <div class="card">
-      <p>パソコンだって、フリーズしたら再起動するよね？</p>
-      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="card">
-      <p>夜の街にネオンが灯る。</p>
-      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="card">
-      <p>「どうせ変わらない」って思ってる人、多いよね。</p>
-      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="card">
-      <p>泣く理由が、わからないときがある。</p>
-      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="card">
-      <p>忙しい毎日を送っていらっしゃる皆様。</p>
-      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <div class="slider-container">
     
   </div>
+
+  <div class="slider-container">
+    
+  </div>
+
+  <footer>
+    &copy; 2025 癒し系コミュニティ
+  </footer>
 </body>
 </html>
