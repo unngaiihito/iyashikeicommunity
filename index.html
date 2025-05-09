@@ -14,18 +14,20 @@
             color: #333;
         }
         header {
-            background: #88c0d0;
-            color: white;
-            padding: 20px;
+            background: url('header_bg.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
-        header img {
-            height: 40px;
-            margin-right: 10px;
+        header h1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
         }
         nav {
-            background: #eee;
+            background: #e0e0e0;
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -37,39 +39,29 @@
         }
         .container {
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
-        .hero-image {
-            width: 100%;
-            height: 50vh;
-            background-image: url('header_bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .intro {
+        .intro p {
             text-align: center;
-            padding: 20px;
-        }
-        .tag-list {
-            text-align: center;
-            font-size: 1.2em;
-            margin: 20px;
+            line-height: 1.8;
         }
         .video-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 20px;
+            justify-content: center;
         }
         .video-card {
-            background: #fff;
+            background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            width: 320px;
-            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
+            width: 300px;
         }
         .video-card h3 {
             font-size: 1em;
-            margin: 0 0 10px;
+            margin-bottom: 8px;
         }
         .video-card iframe {
             width: 100%;
@@ -78,55 +70,38 @@
         }
         .breadcrumb {
             font-size: 0.9em;
-            margin-bottom: 10px;
-            color: #555;
+            margin-bottom: 15px;
         }
         @media (max-width: 600px) {
-            .video-card {
-                width: 90%;
-            }
-            .hero-image {
-                height: 30vh;
+            .video-card iframe {
+                height: 220px;
             }
         }
     </style>
 </head>
 <body>
 <header>
-    <img src="logo.png" alt="ロゴ">
     <h1>癒し系コミュニティ</h1>
 </header>
-<nav>
+<nav class="navbar">
     <a href="index.html">ホーム</a>
     <a href="tag_list.html">タグ一覧</a>
 </nav>
-<div class="hero-image"></div>
 <div class="container">
-    <section class="intro">
-        <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
-        日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
-        「癒し」「前向き」「希望」など、あなたの心に合った動画を見つけてください。</p>
-    </section>
     
-    <section class="tag-list">
+    <section class="intro">
         
-    </section>
-    <section class="video-grid">
-        
-<section class='intro'>
-  <img src="header_bg.jpg" alt="トップ画像">
-</section>
-<section>
 <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
 日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
 「癒し」「前向き」「希望」など、あなたの心に合った動画を見つけてください。</p>
-</section>
-<section>
-  <h2>タグ別に動画を見る</h2>
-  <ul>
-    <li><a href='tag_癒し.html'>#癒し</a></li><li><a href='tag_安らぎ.html'>#安らぎ</a></li><li><a href='tag_希望.html'>#希望</a></li><li><a href='tag_前向き.html'>#前向き</a></li><li><a href='tag_切なさ.html'>#切なさ</a></li>
-  </ul>
-</section>
+
+    </section>
+    <section>
+        
+<h2>タグ別に動画を見る</h2>
+<div class='tag-links'>
+<a href='tag_癒し.html'>#癒し</a><a href='tag_安らぎ.html'>#安らぎ</a><a href='tag_希望.html'>#希望</a><a href='tag_前向き.html'>#前向き</a><a href='tag_切なさ.html'>#切なさ</a>
+</div>
 
     </section>
 </div>
