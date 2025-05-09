@@ -4,121 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>#切なさ の動画一覧</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.css" />
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      overflow-x: hidden;
     }
-    .header {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      background: url("") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
     }
-    .header-title {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 10px 30px;
-      border-radius: 10px;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    nav {
-      background: #eee;
-      padding: 10px;
+    .nav {
       display: flex;
       justify-content: center;
       gap: 20px;
+      background-color: #eee;
+      padding: 10px 0;
     }
-    .tag-bar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
-      background: #f9f9f9;
+    .tags {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
     }
-    .tag-bar a {
-      color: #0066cc;
+    .tags a {
+      color: white;
+      margin: 0 6px;
       text-decoration: none;
     }
-    .intro-text {
-      text-align: center;
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
       padding: 20px;
+      gap: 16px;
     }
-    .swiper {
-      width: 90%;
-      padding: 40px 0;
-    }
-    .swiper-slide {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      overflow: hidden;
-      max-width: 240px;
-    }
-    iframe {
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      border: none;
-    }
-    .caption {
+    .card {
+      flex: 0 0 auto;
+      width: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 10px;
-      font-size: 14px;
+      text-align: center;
+    }
+    .card iframe {
+      width: 100%;
+      height: 420px;
+    }
+    .description {
+      text-align: center;
+      margin: 20px;
+      white-space: pre-wrap;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-title">#切なさ の動画一覧</div>
-  </div>
-  <nav>
+  <header>
+    <h1>癒し系コミュニティ</h1>
+    <p class="description">癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。
+日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。
+『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。</p>
+  </header>
+
+  <nav class="nav">
     <a href="index.html">ホーム</a>
     <a href="tag_list.html">タグ一覧</a>
   </nav>
-  <div class="tag-bar">
+
+  <div class="tags">
     
-    <a href="tag_癒し.html">#癒し</a>
+      <a href="tag_癒し.html">#癒し</a>
     
-    <a href="tag_安らぎ.html">#安らぎ</a>
+      <a href="tag_安らぎ.html">#安らぎ</a>
     
-    <a href="tag_希望.html">#希望</a>
+      <a href="tag_希望.html">#希望</a>
     
-    <a href="tag_切なさ.html">#切なさ</a>
+      <a href="tag_切なさ.html">#切なさ</a>
     
-    <a href="tag_前向き.html">#前向き</a>
-    
-  </div>
-  <div class="intro-text">
+      <a href="tag_前向き.html">#前向き</a>
     
   </div>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      
-      <div class="swiper-slide">
-        <div class="caption"></div>
-        <iframe src="https://www.youtube.com/embed/" allowfullscreen></iframe>
-      </div>
-      
+
+  <div class="slider">
+    
+    <div class="card">
+      <p>泣く理由が、わからないときがある。</p>
+      <iframe src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"></script>
-  <script>
-    new Swiper('.swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
 </body>
 </html>
