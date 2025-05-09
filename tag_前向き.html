@@ -2,93 +2,116 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#前向き の動画</title>
-    <style>
-        body {
-            font-family: 'Yu Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #88c0d0;
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-        header img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        nav {
-            background: #e0e0e0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        .container {
-            padding: 20px;
-        }
-        .intro img {
-            width: 100vw;
-            height: auto;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-        .video-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 640px;
-        }
-        .video-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.1em;
-        }
-        .video-card iframe {
-            width: 100%;
-            height: 220px;
-            border: none;
-        }
-        .breadcrumb {
-            font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#前向き の動画</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Yu Gothic', sans-serif;
+      background: #f8f8f8;
+    }
+    header {
+      background: #6cb4e4;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 32px;
+      margin-right: 10px;
+    }
+    nav {
+      background: #e6e6e6;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .breadcrumb {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    .intro img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .description {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 640px;
+    }
+    .video-card h3 {
+      margin: 0 0 10px;
+      font-size: 1em;
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .video-card iframe {
+        height: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
-    <img src="logo.png" alt="ロゴ">
-    <h1>前向き</h1>
+  <img src="logo.png" alt="ロゴ">
+  <h1>前向き</h1>
 </header>
-<nav class="navbar">
-    <a href="index.html">ホーム</a>
-    <a href="tag_list.html">タグ一覧</a>
+<nav>
+  <a href="index.html">ホーム</a>
+  <a href="tag_list.html">タグ一覧</a>
 </nav>
 <div class="container">
-    <div class="breadcrumb">タグ: <strong>前向き</strong></div>
-    <section class="intro">
-        <img src="intro_banner.jpg" alt="癒しイメージ">
-    </section>
-    <section>
-        
+  <div class="breadcrumb">タグ: <strong>前向き</strong></div>
+  <section class="intro">
+    <img src="intro_banner.jpg" alt="癒しイメージ">
+  </section>
+  <section class="description">
+    癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
+    日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。
+  </section>
+  <section>
+    
 <div class="video-card">
   <h3>忙しい毎日を送っていらっしゃる皆様。</h3>
   <iframe src="https://youtube.com/embed/gPmLxNiRmVM" allowfullscreen></iframe>
 </div>
 
-    </section>
+  </section>
 </div>
 </body>
 </html>
