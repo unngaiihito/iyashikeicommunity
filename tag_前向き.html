@@ -4,60 +4,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>#前向き の動画</title>
+  <title>#前向き の動画一覧</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Yu Gothic', sans-serif;
-      background: #f8f8f8;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
-      background: #6cb4e4;
+      background: #88c0d0;
       color: white;
       padding: 10px 20px;
       display: flex;
       align-items: center;
     }
     header img {
-      height: 32px;
+      height: 40px;
       margin-right: 10px;
     }
     nav {
-      background: #e6e6e6;
-      padding: 8px;
+      background: #e0e0e0;
+      padding: 10px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      flex-wrap: wrap;
     }
     nav a {
+      margin: 5px 15px;
       text-decoration: none;
       color: #333;
-      font-weight: bold;
+    }
+    .intro img {
+      width: 100vw;
+      height: 40vh;
+      object-fit: cover;
+      display: block;
+    }
+    .intro-text {
+      padding: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
     }
     .container {
       padding: 20px;
-    }
-    .breadcrumb {
-      font-size: 0.9em;
-      margin-bottom: 10px;
-    }
-    .intro img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-    .description {
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
-      font-size: 1.1em;
+      max-width: 960px;
+      margin: auto;
     }
     .video-card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 10px;
-      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 30px auto;
+      padding: 15px;
       max-width: 640px;
     }
     .video-card h3 {
@@ -66,22 +69,17 @@
     }
     .video-card iframe {
       width: 100%;
-      height: 220px;
+      height: 320px;
       border: none;
       border-radius: 6px;
     }
-
-    @media screen and (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+    .breadcrumb {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
       .video-card iframe {
-        height: 180px;
+        height: 200px;
       }
     }
   </style>
@@ -89,29 +87,28 @@
 <body>
 <header>
   <img src="logo.png" alt="ロゴ">
-  <h1>前向き</h1>
+  <h1>#前向き の動画一覧</h1>
 </header>
 <nav>
   <a href="index.html">ホーム</a>
   <a href="tag_list.html">タグ一覧</a>
 </nav>
+<section class="intro">
+  <img src="intro_banner.jpg" alt="癒しイメージ">
+</section>
+<div class="intro-text">
+  <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
+  日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+  「癒し」「前向き」「希望」など、あなたの心に合った動画を見つけてください。</p>
+</div>
 <div class="container">
   <div class="breadcrumb">タグ: <strong>前向き</strong></div>
-  <section class="intro">
-    <img src="intro_banner.jpg" alt="癒しイメージ">
-  </section>
-  <section class="description">
-    癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
-    日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。
-  </section>
-  <section>
-    
+  
 <div class="video-card">
   <h3>忙しい毎日を送っていらっしゃる皆様。</h3>
   <iframe src="https://youtube.com/embed/gPmLxNiRmVM" allowfullscreen></iframe>
 </div>
 
-  </section>
 </div>
 </body>
 </html>
