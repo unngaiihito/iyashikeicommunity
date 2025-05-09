@@ -2,102 +2,123 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>#安らぎ の動画一覧</title>
-  <style>
-    body {
-      font-family: 'Yu Gothic', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #88c0d0;
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-    }
-    header img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    nav {
-      background: #e0e0e0;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-    }
-    .container {
-      padding: 20px;
-    }
-    .intro img {
-      width: 100vw;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-    .video-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .video-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 15px;
-      width: 320px;
-    }
-    .video-card h3 {
-      margin: 0 0 10px;
-      font-size: 1em;
-    }
-    .video-card iframe {
-      width: 100%;
-      height: 180px;
-      border: none;
-    }
-    .breadcrumb {
-      font-size: 0.9em;
-      margin-bottom: 15px;
-    }
-    @media (max-width: 768px) {
-      .video-card {
-        width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#安らぎ の動画一覧</title>
+    <style>
+        body {
+            font-family: 'Yu Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fdfdfd;
+            color: #333;
+        }
+        header {
+            background: #88c0d0;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        nav {
+            background: #eee;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .hero-image {
+            width: 100%;
+            height: 50vh;
+            background-image: url('header_bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+        .tag-list {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px;
+        }
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 320px;
+            padding: 15px;
+        }
+        .video-card h3 {
+            font-size: 1em;
+            margin: 0 0 10px;
+        }
+        .video-card iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+        .breadcrumb {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            .video-card {
+                width: 90%;
+            }
+            .hero-image {
+                height: 30vh;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
-  <img src="logo.png" alt="ロゴ">
-  <h1>#安らぎ の動画一覧</h1>
+    <img src="logo.png" alt="ロゴ">
+    <h1>#安らぎ の動画一覧</h1>
 </header>
-<nav class="navbar">
-  <a href="index.html">ホーム</a>
-  <a href="tag_list.html">タグ一覧</a>
+<nav>
+    <a href="index.html">ホーム</a>
+    <a href="tag_list.html">タグ一覧</a>
 </nav>
+<div class="hero-image"></div>
 <div class="container">
-  <div class="breadcrumb">タグ: <strong>安らぎ</strong></div>
-  <section class="intro">
-    <img src="intro_banner.jpg" alt="癒しイメージ">
-  </section>
-  <section>
-    <div class="video-list">
+    <section class="intro">
+        <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
+        日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+        「癒し」「前向き」「希望」など、あなたの心に合った動画を見つけてください。</p>
+    </section>
+    <div class="breadcrumb">タグ: <strong>安らぎ</strong></div>
+    <section class="tag-list">
+        
+    </section>
+    <section class="video-grid">
+        <div class="video-list">
 <div class="video-card">
   <h3>夜の街にネオンが灯る。</h3>
   <iframe src="https://youtube.com/embed/uCQ1DqHXZm8" allowfullscreen></iframe>
 </div>
 </div>
-  </section>
+    </section>
 </div>
 </body>
 </html>
