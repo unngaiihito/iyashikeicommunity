@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8-sig" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>#安らぎ の動画一覧</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f8f8f8;
     }
-    header {
+    .header {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 1rem 1rem 0.5rem;
+      padding: 1rem 1rem 0.5rem 1rem;
     }
-    header h1 {
-      margin: 0.5rem;
+    .header h1 {
+      margin: 0;
+      font-size: 1.8rem;
     }
-    header p {
-      margin: 0.5rem;
+    .header p {
+      margin: 0.5rem 0 0;
       font-size: 0.9rem;
     }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      background: #eee;
-      padding: 0.5rem 1rem;
-    }
-    .tag-nav {
+    .navbar {
       display: flex;
       justify-content: center;
-      background: #003366;
-      padding: 0.3rem;
+      gap: 1.5rem;
+      padding: 0.5rem;
+      background-color: #eee;
+      font-size: 0.95rem;
+    }
+    .tagbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background-color: #003366;
+      padding: 0.5rem;
       flex-wrap: wrap;
     }
-    .tag-nav a {
+    .tagbar a {
       color: white;
-      margin: 0 0.6rem;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
-    .litlink {
-      color: #003366;
-      font-size: 0.9rem;
-      text-align: right;
-      padding-right: 1rem;
-      margin-top: 0.3rem;
-    }
-    .slider-container {
+    .carousel {
       display: flex;
       overflow-x: auto;
       scroll-behavior: smooth;
+      gap: 1rem;
       padding: 1rem;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
     }
     .card {
       flex: 0 0 auto;
-      width: 240px;
-      background: white;
-      margin: 0 0.6rem;
-      padding: 0.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-    iframe {
-      width: 100%;
-      height: 430px;
-      border: none;
+      width: 220px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
     }
     .card h3 {
-      font-size: 1rem;
-      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      margin: 0 0 0.5rem;
     }
-    .arrow {
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 0 1rem;
-      color: #003366;
-      user-select: none;
+    .card iframe {
+      width: 100%;
+      height: 390px;
+      border: none;
+      border-radius: 8px;
     }
-    footer {
+    .footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.8rem;
@@ -88,40 +84,40 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="header">
     <h1>癒し系コミュニティ</h1>
-    <p>癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
-    日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
-    『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。</p>
-  </header>
-  <nav>
-    <div><a href="index.html">ホーム</a></div>
-    <div class="litlink"><a href="https://lit.link/kotobaassist" target="_blank">lit.link</a></div>
-  </nav>
-  <div class="tag-nav">
+    <p>
+      癒し系コミュニティは、心に響くショート動画をタグ別に集めたオンライン図書館です。<br>
+      日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+      『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
+    </p>
+  </div>
+  <div class="navbar">
+    <a href="index.html">ホーム</a>
     
-      <a href="tag_癒し.html">#癒し</a>
+    <a href="tag_癒し.html">#癒し</a>
     
-      <a href="tag_安らぎ.html">#安らぎ</a>
+    <a href="tag_安らぎ.html">#安らぎ</a>
     
-      <a href="tag_希望.html">#希望</a>
+    <a href="tag_希望.html">#希望</a>
     
-      <a href="tag_前向き.html">#前向き</a>
+    <a href="tag_前向き.html">#前向き</a>
     
-      <a href="tag_切なさ.html">#切なさ</a>
+    <a href="tag_切なさ.html">#切なさ</a>
+    
+    <a href="https://lit.link/kotobaassist" target="_blank">lit.link</a>
+  </div>
+  <div class="tagbar"></div>
+  <div class="carousel">
+    
+    <div class="card">
+      <h3>夜の街にネオンが灯る。</h3>
+      <iframe src="https://www.youtube.com/embed/" allowfullscreen></iframe>
+    </div>
     
   </div>
-
-  <div class="slider-container">
-    
+  <div class="footer">
+    © 2025 癒し系コミュニティ
   </div>
-
-  <div class="slider-container">
-    
-  </div>
-
-  <footer>
-    &copy; 2025 癒し系コミュニティ
-  </footer>
 </body>
 </html>
