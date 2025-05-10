@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8-sig" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#希望 の動画一覧</title>
     <style>
         body {
@@ -17,6 +17,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .site-title {
             font-size: 24px;
@@ -24,48 +25,30 @@
         }
         .site-description {
             font-size: 13px;
-            color: white;
             text-align: right;
-            max-width: 60%;
+            max-width: 600px;
         }
         .nav-bar {
             background-color: #005577;
             display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
+            flex-wrap: wrap;
             padding: 10px;
         }
         .nav-bar a {
+            background-color: #0077aa;
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 5px;
             padding: 6px 12px;
-            background-color: #0077aa;
             border-radius: 4px;
             font-size: 14px;
         }
         .nav-bar a:hover {
-            background-color: #005577;
+            background-color: #004455;
         }
-        .video-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .video-header h2 {
-            margin: 0;
+        h2 {
             font-size: 18px;
-            color: #444;
-        }
-        .scroll-button {
-            padding: 6px 12px;
-            background-color: #0077aa;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
+            margin: 20px 0 10px 20px;
         }
         .slider {
             display: flex;
@@ -75,29 +58,34 @@
         }
         .card {
             flex: 0 0 auto;
+            width: 220px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin: 10px;
-            width: 220px;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .wide-card {
+            width: 400px;
         }
         .card h3 {
             font-size: 14px;
             margin: 10px;
             text-align: center;
         }
-        .card iframe {
+        iframe {
             width: 100%;
             height: 390px;
         }
-        .wide-card {
-            width: 400px;
-        }
         .wide-card iframe {
             height: 225px;
+        }
+        p.views {
+            font-size: 12px;
+            color: gray;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -129,12 +117,17 @@
     </nav>
     
 
-    <div class="video-header">
-        <h2>ショート動画</h2>
-        
-    </div>
+    
+    
 
+    <h2>ショート動画</h2>
     <div class="slider">
+        
+        <div class="card">
+            <h3>「どうせ変わらない」って思ってる人、多いよね。</h3>
+            <iframe src="https://youtube.com/embed/fE1Zxx_iXRE" allowfullscreen></iframe>
+            <p class="views">0 views</p>
+        </div>
         
     </div>
 
