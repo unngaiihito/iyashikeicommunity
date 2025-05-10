@@ -8,138 +8,136 @@
         body {
             margin: 0;
             font-family: 'Yu Gothic', sans-serif;
-            background-color: #f8f8f8;
-            overflow-x: hidden;
+            background-color: #f8f9fa;
         }
         header {
             background-color: #003366;
             color: white;
             padding: 10px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
-        header h1 {
-            font-size: 1.4em;
-            margin: 0;
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
         }
-        .tag-bar {
-            background-color: #003366;
+        .site-description {
+            font-size: 13px;
             color: white;
-            padding: 8px 10px;
+            text-align: right;
+            max-width: 60%;
+        }
+        .nav-bar {
+            background-color: #005577;
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
+            padding: 10px;
         }
-        .tag-bar a {
+        .nav-bar a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.9em;
+            margin: 0 10px;
+            padding: 6px 12px;
+            background-color: #0077aa;
+            border-radius: 4px;
+            font-size: 14px;
         }
-        .tag-bar a.selected {
-            font-weight: bold;
-            text-decoration: underline;
+        .nav-bar a:hover {
+            background-color: #005577;
         }
-        .slider-container {
-            position: relative;
-            padding: 20px;
+        .video-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
-        .slider-wrapper {
+        .video-header h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #444;
+        }
+        .scroll-button {
+            padding: 6px 12px;
+            background-color: #0077aa;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .slider {
             display: flex;
             overflow-x: auto;
             scroll-behavior: smooth;
-            gap: 20px;
-            padding: 10px 0;
+            padding: 10px;
         }
-        .video-card {
+        .card {
+            flex: 0 0 auto;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            min-width: 300px;
-            max-width: 300px;
-            flex: 0 0 auto;
+            margin: 10px;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .video-card iframe {
+        .card h3 {
+            font-size: 14px;
+            margin: 10px;
+            text-align: center;
+        }
+        .card iframe {
             width: 100%;
-            height: 530px;
-            border: none;
-            border-radius: 8px 8px 0 0;
+            height: 390px;
         }
-        .video-card .info {
-            padding: 10px;
+        .wide-card {
+            width: 400px;
         }
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .slider-button.left { left: 0; }
-        .slider-button.right { right: 0; }
-        @media (max-width: 600px) {
-            .video-card iframe {
-                height: 360px;
-            }
-            .tag-bar a {
-                margin-right: 10px;
-            }
+        .wide-card iframe {
+            height: 225px;
         }
     </style>
-    <script>
-        function scrollSlider(direction) {
-            const wrapper = document.querySelector('.slider-wrapper');
-            const amount = direction === 'left' ? -320 : 320;
-            wrapper.scrollBy({ left: amount, behavior: 'smooth' });
-        }
-    </script>
 </head>
 <body>
-<header>
-    <h1>癒し系コミュニティ</h1>
-    <a href="https://lit.link/kotobaassist" target="_blank" style="color:white; font-size: 0.9em;">lit.link</a>
-</header>
-<div class="tag-bar">
-    <a href="index.html" class="">ホーム</a>
-    
-        <a href="tag_癒し.html" class="selected">#癒し</a>
-    
-        <a href="tag_安らぎ.html" class="">#安らぎ</a>
-    
-        <a href="tag_希望.html" class="">#希望</a>
-    
-        <a href="tag_前向き.html" class="">#前向き</a>
-    
-        <a href="tag_切なさ.html" class="">#切なさ</a>
-    
-</div>
-<div class="slider-container">
-    <button class="slider-button left" onclick="scrollSlider('left')">&#9664;</button>
-    <div class="slider-wrapper">
-        
-        <div class="video-card">
-            <iframe src="https://youtube.com/embed/jyaig0T1fFY" allowfullscreen></iframe>
-            <div class="info">
-                <p>パソコンだって、フリーズしたら再起動するよね？</p>
-                <p style="font-size: 0.8em; color: gray;">187 views</p>
-            </div>
+    <header>
+        <div class="site-title">癒し系コミュニティ</div>
+        <div class="site-description">
+            癒し系コミュニティは、心に響くショート・ロング動画をタグ別に集めたオンライン図書館です。<br>
+            日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+            『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
         </div>
+    </header>
+
+    
+    <nav class="nav-bar">
+        <a href="index.html">ホーム</a>
         
-        <div class="video-card">
-            <iframe src="https://youtube.com/embed/https://youtu.be/C3a8G7lT3QA" allowfullscreen></iframe>
-            <div class="info">
-                <p>にぎやかな街の喧騒を離れて</p>
-                
-            </div>
-        </div>
+            <a href="tag_安らぎ.html">#安らぎ</a>
+        
+            <a href="tag_癒し.html">#癒し</a>
+        
+            <a href="tag_切なさ.html">#切なさ</a>
+        
+            <a href="tag_前向き.html">#前向き</a>
+        
+            <a href="tag_希望.html">#希望</a>
+        
+        <a href="https://lit.link/kotobaassist" target="_blank">lit.link</a>
+    </nav>
+    
+
+    <div class="video-header">
+        <h2>ショート動画</h2>
         
     </div>
-    <button class="slider-button right" onclick="scrollSlider('right')">&#9654;</button>
-</div>
+
+    <div class="slider">
+        
+    </div>
+
+    
 </body>
 </html>
