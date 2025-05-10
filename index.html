@@ -13,25 +13,34 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        header p.description {
-            font-size: 14px;
-            margin-top: 10px;
-            color: #dddddd;
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header-description {
+            font-size: 13px;
+            color: #eee;
+            max-width: 800px;
+            line-height: 1.5;
+            text-align: right;
         }
         .nav-bar {
             background-color: #005577;
             display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
+            flex-wrap: wrap;
+            gap: 10px;
             padding: 10px;
+            justify-content: center;
         }
         .nav-bar a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
             padding: 6px 12px;
             background-color: #0077aa;
             border-radius: 4px;
@@ -41,15 +50,16 @@
             background-color: #005577;
         }
         h2 {
-            margin: 20px 20px 10px 20px;
-            font-size: 20px;
+            margin: 10px 20px;
+            font-size: 18px;
             color: #444;
+            display: inline-block;
         }
         .slider {
             display: flex;
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding: 0 10px 20px 10px;
+            padding: 10px;
         }
         .card {
             flex: 0 0 auto;
@@ -81,16 +91,13 @@
 </head>
 <body>
     <header>
-        <h1>癒し系コミュニティ</h1>
-        
-        <p class="description">
+        <div class="header-title">癒し系コミュニティ</div>
+        <div class="header-description">
             癒し系コミュニティは、心に響くショート・ロング動画をタグ別に集めたオンライン図書館です。<br>
             日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
             『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
-        </p>
-        
+        </div>
     </header>
-
     
     <nav class="nav-bar">
         <a href="index.html">ホーム</a>
