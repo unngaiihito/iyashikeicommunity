@@ -17,30 +17,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
-        .header-title {
+        .site-title {
             font-size: 24px;
             font-weight: bold;
         }
-        .header-description {
+        .site-description {
             font-size: 13px;
-            color: #eee;
-            max-width: 800px;
-            line-height: 1.5;
+            color: white;
             text-align: right;
+            max-width: 60%;
         }
         .nav-bar {
             background-color: #005577;
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
             padding: 10px;
-            justify-content: center;
         }
         .nav-bar a {
             color: white;
             text-decoration: none;
+            margin: 0 10px;
             padding: 6px 12px;
             background-color: #0077aa;
             border-radius: 4px;
@@ -49,11 +47,25 @@
         .nav-bar a:hover {
             background-color: #005577;
         }
-        h2 {
-            margin: 10px 20px;
+        .video-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .video-header h2 {
+            margin: 0;
             font-size: 18px;
             color: #444;
-            display: inline-block;
+        }
+        .scroll-button {
+            padding: 6px 12px;
+            background-color: #0077aa;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
         }
         .slider {
             display: flex;
@@ -91,13 +103,14 @@
 </head>
 <body>
     <header>
-        <div class="header-title">癒し系コミュニティ</div>
-        <div class="header-description">
+        <div class="site-title">癒し系コミュニティ</div>
+        <div class="site-description">
             癒し系コミュニティは、心に響くショート・ロング動画をタグ別に集めたオンライン図書館です。<br>
             日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
             『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
         </div>
     </header>
+
     
     <nav class="nav-bar">
         <a href="index.html">ホーム</a>
@@ -116,21 +129,14 @@
     </nav>
     
 
-    
-    
-
-    
-    <h2>ショート動画</h2>
-    <div class="slider">
-        
-        <div class="card">
-            <h3>「今、動くべきか…」</h3>
-            <iframe src="" allowfullscreen></iframe>
-            <p style="font-size:12px; color:gray; margin-bottom:10px;">0 views</p>
-        </div>
+    <div class="video-header">
+        <h2>ショート動画</h2>
         
     </div>
-    
+
+    <div class="slider">
+        
+    </div>
 
     
 </body>
