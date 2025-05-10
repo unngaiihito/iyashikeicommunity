@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#前向き の動画一覧</title>
     <style>
         body {
@@ -15,6 +15,11 @@
             color: white;
             padding: 20px;
             text-align: center;
+        }
+        header p.description {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #dddddd;
         }
         .nav-bar {
             background-color: #005577;
@@ -35,15 +40,8 @@
         .nav-bar a:hover {
             background-color: #005577;
         }
-        .description {
-            padding: 10px 20px;
-            font-size: 15px;
-            color: #333;
-            background-color: #f1f1f1;
-            display: none;
-        }
         h2 {
-            margin: 20px;
+            margin: 20px 20px 10px 20px;
             font-size: 20px;
             color: #444;
         }
@@ -51,7 +49,7 @@
             display: flex;
             overflow-x: auto;
             scroll-behavior: smooth;
-            padding: 10px;
+            padding: 0 10px 20px 10px;
         }
         .card {
             flex: 0 0 auto;
@@ -84,6 +82,7 @@
 <body>
     <header>
         <h1>癒し系コミュニティ</h1>
+        
     </header>
 
     
@@ -104,10 +103,6 @@
     </nav>
     
 
-    <div class="description">
-        
-    </div>
-
     
     
 
@@ -115,16 +110,11 @@
     <h2>ショート動画</h2>
     <div class="slider">
         
-            
-            <div class="card">
-                <h3 title="「今、動くべきか…」">「今、動くべきか…」</h3>
-                <iframe
-                    src="https://www.youtube.com/embed/gPmLxNiRmVM"
-                    allowfullscreen
-                ></iframe>
-                <p style="font-size:12px; color:gray; margin-bottom:10px;">0 views</p>
-            </div>
-            
+        <div class="card">
+            <h3>「今、動くべきか…」</h3>
+            <iframe src="" allowfullscreen></iframe>
+            <p style="font-size:12px; color:gray; margin-bottom:10px;">0 views</p>
+        </div>
         
     </div>
     
