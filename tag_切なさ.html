@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8-sig">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#切なさ の動画一覧</title>
     <style>
@@ -13,20 +13,23 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 10px 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
         .site-title {
             font-size: 24px;
             font-weight: bold;
+            margin-left: 10px;
         }
-        .site-description {
-            font-size: 13px;
-            color: white;
+        .copy-text {
             text-align: right;
-            max-width: 60%;
+            font-size: 14px;
+            color: white;
+            line-height: 1.4;
+            margin-right: 10px;
         }
         .nav-bar {
             background-color: #005577;
@@ -47,25 +50,10 @@
         .nav-bar a:hover {
             background-color: #005577;
         }
-        .video-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .video-header h2 {
-            margin: 0;
-            font-size: 18px;
+        h2 {
+            margin: 20px 20px 10px;
+            font-size: 20px;
             color: #444;
-        }
-        .scroll-button {
-            padding: 6px 12px;
-            background-color: #0077aa;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
         }
         .slider {
             display: flex;
@@ -99,15 +87,22 @@
         .wide-card iframe {
             height: 225px;
         }
+        .description {
+            text-align: center;
+            font-size: 15px;
+            color: #333;
+            margin: 10px 30px;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="site-title">癒し系コミュニティ</div>
-        <div class="site-description">
-            癒し系コミュニティは、心に響くショート・ロング動画をタグ別に集めたオンライン図書館です。<br>
-            日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
-            『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
+        <div class="copy-text">
+            #切なさ に触れて涙を流す夜も、<br>
+            #希望 を求めて前に進む朝も。<br>
+            あなたの気持ちにそっと寄り添う動画を探してください。
         </div>
     </header>
 
@@ -126,18 +121,31 @@
             <a href="tag_希望.html">#希望</a>
         
         <a href="https://lit.link/kotobaassist" target="_blank">lit.link</a>
+        <a href="#long">ロング動画</a>
     </nav>
     
 
-    <div class="video-header">
-        <h2>ショート動画</h2>
-        
-    </div>
+    <h2>ショート動画</h2>
+
+    
+    
 
     <div class="slider">
+        
+        <div class="card">
+            <h3>泣く理由が、わからないときがある。</h3>
+            <iframe src="" allowfullscreen></iframe>
+            <p style="font-size:12px; color:gray; margin-bottom:10px;">0 views</p>
+        </div>
         
     </div>
 
     
+
+    <div class="description">
+        癒し系コミュニティは、心に響くショート・ロング動画をタグ別に集めたオンライン図書館です。<br>
+        日々のストレスや不安、孤独にそっと寄り添い、感情に合わせたメッセージをお届けします。<br>
+        『癒し』『前向き』『希望』など、あなたの心に合った動画を見つけてください。
+    </div>
 </body>
 </html>
